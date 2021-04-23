@@ -1,5 +1,10 @@
 # unity-nodejs-project
  unity client app that connects to nodejs rest api 
+ expressjs
+ csv-writer
+ postgresql
+ pg
+ SimpleJSON
 ![Test Image 1](game.JPG)
 ![Test Image 1](cmd_node.JPG)
 ![Test Image 1](start.JPG)
