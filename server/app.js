@@ -2,6 +2,7 @@ const express = require('express');
 const id = require('shortid');
 const app = express();
 const pool = require("./db");
+const Pool  = require("pg").Pool
 const createCsvWriter = require('csv-writer').createObjectCsvWriter;
 
 
@@ -22,6 +23,14 @@ let car = {
 //get method to get values 
 app.get('/car', (req, res) => {
     res.send(car);
+});
+
+app.get('/cars', async (req, res) => {
+    
+	const response = await pool.query('SELECT * FROM car');
+	console.log(response.rows);	
+	res.json(response.rows);
+		 
 });
 
 
